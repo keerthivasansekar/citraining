@@ -35,7 +35,7 @@ class Login extends MY_Controller
 				];
 				if($user['id'] != NULL && $this->do_login($login_input, $user))
 				{
-					redirect('login/securepage','refresh');
+					redirect('dashboard','refresh');
 				}
 				else
 				{
@@ -227,17 +227,4 @@ class Login extends MY_Controller
 		$this->session->unset_userdata('is_loggedin');
 	}
 
-	private function check_login()
-	{
-		$status = $this->session->userdata('is_loggedin');
-
-		if($status == TRUE)
-		{
-			return TRUE;
-		}
-		else
-		{
-			return FALSE;
-		}		
-	}
 }

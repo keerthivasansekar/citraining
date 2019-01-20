@@ -7,4 +7,19 @@ class MY_Controller extends CI_Controller
 	{
 		parent::__construct();
 	}
+
+	protected function check_login()
+	{
+		$status = $this->session->userdata('is_loggedin');
+
+		if($status == TRUE)
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		}		
+	}
+
 }
