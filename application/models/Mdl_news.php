@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Mdl_news extends CI_Model
+class Mdl_news extends MY_Model
 {
 	
 	public function __construct()
